@@ -27,4 +27,4 @@ install:
 script:
   - ganache-cli
   - truffle test
-  - truffle migrate
+  - truffle migrate --network ropsten
