@@ -28,15 +28,6 @@ async function deployTestnet(deployer) {
 
 module.exports = function(deployer) {
   deployer.then(async() => {
-    console.log(deployer.network);
-    switch (deployer.network) {
-      case 'development':
-      case 'rinkeby':
-      case 'ropsten':
-        await deployTestnet(deployer);
-        break;
-      default:
-        throw("Unsupported network");
-    }
+    await deployTestnet(deployer);
   })
 };
